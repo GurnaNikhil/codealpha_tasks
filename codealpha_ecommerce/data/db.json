@@ -1,0 +1,390 @@
+{
+  "products": [
+    {
+      "id": "prod-1",
+      "title": "Aura Sound Pro Wireless Noise-Cancelling Headphones",
+      "category": "Audio & Tech",
+      "price": 249.99,
+      "originalPrice": 299.99,
+      "rating": 4.9,
+      "ratingCount": 142,
+      "stock": 17,
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "description": "Immerse yourself in studio-grade acoustic clarity with active adaptive noise cancellation, 40-hour continuous battery life, and ultra-soft memory foam ear cushions.",
+      "features": [
+        "Hybrid active noise cancellation with dual-sensor microphones",
+        "Up to 40 hours of playback on a single charge",
+        "Quick charging: 10 minutes gives 4 hours of listening",
+        "Ultra-low latency Bluetooth 5.3 with multipoint pairing",
+        "Custom EQ tuning via companion interface"
+      ],
+      "specs": {
+        "Driver Size": "40mm Neodymium",
+        "Frequency Response": "20Hz - 40kHz",
+        "Weight": "250g",
+        "Charging Port": "USB-C Fast Charging"
+      },
+      "isFeatured": true
+    },
+    {
+      "id": "prod-2",
+      "title": "Minimalist Chrono Sapphire Wristwatch",
+      "category": "Accessories",
+      "price": 185,
+      "originalPrice": 220,
+      "rating": 4.8,
+      "ratingCount": 96,
+      "stock": 12,
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      "description": "Crafted with surgical-grade 316L stainless steel and scratch-resistant sapphire crystal glass. An understated modern timepiece built for everyday precision.",
+      "features": [
+        "Swiss quartz analog movement with date calendar aperture",
+        "Scratch-resistant domed sapphire crystal",
+        "Interchangeable Italian full-grain leather band",
+        "5 ATM / 50 meters water resistance"
+      ],
+      "specs": {
+        "Case Diameter": "40mm",
+        "Case Thickness": "7.8mm",
+        "Band Width": "20mm",
+        "Movement": "Swiss Quartz Caliber"
+      },
+      "isFeatured": true
+    },
+    {
+      "id": "prod-3",
+      "title": "Ergonomic Hot-Swappable Mechanical Keyboard",
+      "category": "Electronics",
+      "price": 139.5,
+      "rating": 4.7,
+      "ratingCount": 88,
+      "stock": 24,
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+      "description": "Anodized aluminum frame, gasket-mounted sound dampening, and hot-swappable switches make this the ultimate tactile typing companion for developers and creators.",
+      "features": [
+        "Gasket-mount construction for soft, cushioned keystrokes",
+        "Pre-lubed linear switches for smooth, quiet typing",
+        "Per-key RGB backlight with programmable profiles",
+        "Tri-mode connectivity: 2.4GHz wireless, Bluetooth 5.1, and USB-C"
+      ],
+      "specs": {
+        "Layout": "75% Compact (82 Keys)",
+        "Battery Capacity": "4000mAh",
+        "Keycaps": "Double-shot PBT Cherry Profile",
+        "Compatibility": "macOS, Windows, Linux, iOS"
+      },
+      "isFeatured": true
+    },
+    {
+      "id": "prod-4",
+      "title": "Handcrafted Ceramic Dripper & Mug Set",
+      "category": "Home & Kitchen",
+      "price": 46,
+      "originalPrice": 55,
+      "rating": 4.9,
+      "ratingCount": 64,
+      "stock": 15,
+      "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80",
+      "description": "Each piece is hand-thrown and kiln-fired with a matte stone reactive glaze. Engineered for optimal thermal retention and slow pour-over coffee rituals.",
+      "features": [
+        "Internal spiral ribs promote balanced extraction rates",
+        "Lead-free, non-toxic stoneware clay construction",
+        "Microwave and dishwasher safe durable design",
+        "Includes cone dripper, server carafe, and 350ml mug"
+      ],
+      "specs": {
+        "Material": "High-density Stoneware",
+        "Capacity": "Server 500ml / Mug 350ml",
+        "Finish": "Matte Oatmeal Speckle",
+        "Origin": "Artisan Handcrafted"
+      }
+    },
+    {
+      "id": "prod-5",
+      "title": "Merino Wool Thermal Everyday Crewneck",
+      "category": "Apparel",
+      "price": 98,
+      "rating": 4.8,
+      "ratingCount": 110,
+      "stock": 30,
+      "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=800&q=80",
+      "description": "Spun from 100% superfine Australian merino wool. Naturally moisture-wicking, odor-resistant, and climate-regulating across seasons.",
+      "features": [
+        "Superfine 18.5 micron merino fibers for zero itch comfort",
+        "Natural temperature regulation keeps you warm in cold and cool in heat",
+        "Reinforced collar, hem, and cuffs for shape retention",
+        "Machine washable on gentle wool cycle"
+      ],
+      "specs": {
+        "Fabric Weight": "260 gsm Midweight",
+        "Fiber": "100% Responsible Wool Standard Certified",
+        "Fit": "Tailored Regular",
+        "Care": "Cold water gentle wash"
+      }
+    },
+    {
+      "id": "prod-6",
+      "title": "Ultra-Slim 15.6\" 4K Portable IPS Monitor",
+      "category": "Electronics",
+      "price": 269,
+      "originalPrice": 319,
+      "rating": 4.7,
+      "ratingCount": 73,
+      "stock": 9,
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "description": "Expand your visual workspace anywhere. Features crisp 3840x2160 UHD resolution, 100% sRGB color gamut, and single-cable USB-C power/signal delivery.",
+      "features": [
+        "Stunning 4K UHD IPS panel with 178-degree wide viewing angle",
+        "Single USB-C cable for both video transmission and power",
+        "Built-in stereo speakers and 3.5mm audio headphone jack",
+        "Magnetic origami smart protective stand case included"
+      ],
+      "specs": {
+        "Screen Size": "15.6 inches (3840 x 2160)",
+        "Brightness": "400 cd/m²",
+        "Ports": "2x Full-feature USB-C, 1x Mini-HDMI",
+        "Thickness": "5.5mm at thinnest point"
+      },
+      "isFeatured": true
+    },
+    {
+      "id": "prod-7",
+      "title": "Full-Grain Leather Weekender Duffle",
+      "category": "Accessories",
+      "price": 215,
+      "originalPrice": 250,
+      "rating": 4.9,
+      "ratingCount": 52,
+      "stock": 8,
+      "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80",
+      "description": "Handcrafted from vegetable-tanned full-grain cowhide that develops a rich, golden patina over years of travel. Features separate shoe compartment and brass hardware.",
+      "features": [
+        "Ventilated side compartment for footwear or laundry",
+        "Solid brass YKK antique finish dual zippers",
+        "Detachable padded ergonomic leather shoulder strap",
+        "Compliant with standard airline carry-on overhead dimensions"
+      ],
+      "specs": {
+        "Dimensions": "52cm x 28cm x 26cm",
+        "Capacity": "42 Liters",
+        "Weight": "1.85 kg",
+        "Hardware": "Antique Solid Brass"
+      }
+    },
+    {
+      "id": "prod-8",
+      "title": "Cold Brew Precision Vacuum Carafe",
+      "category": "Home & Kitchen",
+      "price": 39.95,
+      "rating": 4.6,
+      "ratingCount": 89,
+      "stock": 22,
+      "image": "https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=800&q=80",
+      "description": "Silky smooth, low-acidity cold brew extracted over 12-24 hours. Features a dual-mesh 304 stainless steel microfilter that blocks all sediment.",
+      "features": [
+        "Extra-fine stainless steel mesh filter prevents bitter sludge",
+        "BPA-free silicone airtight seal locks in flavor for up to 2 weeks",
+        "Thermal shock-resistant borosilicate glass body",
+        "Ergonomic nonslip handle and drip-free pouring spout"
+      ],
+      "specs": {
+        "Capacity": "1.5 Liters (approx. 6 cups)",
+        "Filter": "Laser-cut 304 Stainless Steel",
+        "Glass Type": "Borosilicate (-20°C to 150°C)",
+        "Cleaning": "All parts dishwasher safe"
+      }
+    },
+    {
+      "id": "prod-9",
+      "title": "Smart Ambient Nordic Light Bar & Lamp",
+      "category": "Home & Living",
+      "price": 78,
+      "originalPrice": 92,
+      "rating": 4.8,
+      "ratingCount": 114,
+      "stock": 16,
+      "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80",
+      "description": "Sculptural matte finish aluminum luminaire providing diffuse, flicker-free circadian lighting. Seamless capacitive touch dimming and warm-to-cool white spectrum.",
+      "features": [
+        "Stepless touch dimming from 1% to 100% luminance",
+        "Adjustable color temperature (2700K warm sunrise to 6500K daylight)",
+        "Eye-care flicker-free optical diffuser with CRI > 95",
+        "Weighted silicone padded base prevents desk scratches"
+      ],
+      "specs": {
+        "Luminous Flux": "900 Lumens",
+        "Power Consumption": "12 Watts",
+        "LED Lifespan": "50,000 Hours",
+        "Materials": "Aviation-grade Aluminum & Polycarbonate"
+      }
+    },
+    {
+      "id": "prod-10",
+      "title": "All-Weather Waterproof Technical Shell Jacket",
+      "category": "Apparel",
+      "price": 145,
+      "rating": 4.7,
+      "ratingCount": 67,
+      "stock": 20,
+      "image": "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80",
+      "description": "Engineered for unpredictable forecasts. Three-layer microporous membrane with 20,000mm hydrostatic head rating and taped seam construction.",
+      "features": [
+        "20,000mm waterproof / 15,000g breathability rating",
+        "Fully taped waterproof seams and AquaGuard water-repellent zippers",
+        "Dual underarm zipper vents for rapid thermal dumping",
+        "Adjustable storm hood with stiffened visor"
+      ],
+      "specs": {
+        "Membrane": "3-Layer HydroShield Tech",
+        "Weight": "380g (Size Medium)",
+        "Pockets": "2 hand pockets, 1 internal chest pocket, 1 pass pocket",
+        "Fit": "Athletic regular with room for base layers"
+      }
+    },
+    {
+      "id": "prod-11",
+      "title": "Precision Ergonomic Wireless Mouse",
+      "category": "Electronics",
+      "price": 64.99,
+      "rating": 4.9,
+      "ratingCount": 156,
+      "stock": 28,
+      "image": "https://images.unsplash.com/photo-1615663245857-ac93bb7c39e7?auto=format&fit=crop&w=800&q=80",
+      "description": "Designed to fit the natural contours of your hand with a 57° ergonomic vertical angle, reducing wrist muscle strain and fatigue over long work hours.",
+      "features": [
+        "4000 DPI high-precision optical sensor works on any surface",
+        "Whisper-quiet acoustic switches reduce click noise by 90%",
+        "Rechargeable via USB-C with 70-day battery life per full charge",
+        "Multi-device flow across up to 3 computers via Bluetooth/2.4G"
+      ],
+      "specs": {
+        "Sensor": "Advanced Darkfield Laser / Optical",
+        "Angle": "57° Natural Handshake Posture",
+        "Buttons": "6 customizable buttons",
+        "Weight": "135g"
+      }
+    },
+    {
+      "id": "prod-12",
+      "title": "Ultrasonic Ceramic Aromatherapy Mist Diffuser",
+      "category": "Home & Living",
+      "price": 52,
+      "originalPrice": 60,
+      "rating": 4.8,
+      "ratingCount": 82,
+      "stock": 14,
+      "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
+      "description": "Transform your living space into a tranquil oasis. Ultrasonic 2.4MHz vibration diffuses pure essential oil molecules without heat damage.",
+      "features": [
+        "Handmade stone ceramic cover with architectural fluted texture",
+        "Ultrasonic quiet operation (<20dB) suitable for nightstands",
+        "Auto shut-off protection when water reservoir empties",
+        "Warm ambient breathing nightlight function"
+      ],
+      "specs": {
+        "Water Capacity": "200ml (Up to 8 hours continuous mist)",
+        "Coverage Area": "Up to 300 sq ft",
+        "Mist Modes": "Continuous or 30s Intermittent",
+        "Material": "Porcelain Ceramic & BPA-Free Reservoir"
+      }
+    }
+  ],
+  "users": [
+    {
+      "id": "user-demo-1",
+      "name": "Alex Morgan",
+      "email": "alex@example.com",
+      "passwordHash": "ef92b778bafe771e89245b89ecbc08a44a4e166c06659911881f383d4473e94f",
+      "createdAt": "2026-09-22T06:56:55.995Z"
+    },
+    {
+      "id": "user-0aef264e-4f0e-4ff7-8a13-e39ef028f6dd",
+      "name": "nikhil",
+      "email": "nikhil@gmail.com",
+      "passwordHash": "d47ac8ab883ad37bfbb248a2247598bdf76baecfeda29063ce350dfd09447363",
+      "createdAt": "2026-09-22T06:58:38.279Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord-4a58bb5b-85a3-45c9-bc02-19bdd69df2fc",
+      "orderNumber": "ORD-63725",
+      "userId": "user-0aef264e-4f0e-4ff7-8a13-e39ef028f6dd",
+      "customerName": "nikhil",
+      "customerEmail": "nikhil@gmail.com",
+      "shippingAddress": {
+        "fullName": "nikhil",
+        "email": "nikhil@gmail.com",
+        "phone": "+1 (555) 019-2834",
+        "street": "124 Market Street, Apt 4B",
+        "city": "San Francisco",
+        "state": "CA",
+        "zipCode": "94105",
+        "country": "United States"
+      },
+      "items": [
+        {
+          "productId": "prod-1",
+          "title": "Aura Sound Pro Wireless Noise-Cancelling Headphones",
+          "price": 249.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+        }
+      ],
+      "subtotal": 249.99,
+      "shippingFee": 0,
+      "tax": 20,
+      "discount": 0,
+      "total": 269.99,
+      "paymentMethod": "Cash on Delivery (Pay upon delivery)",
+      "status": "Confirmed",
+      "createdAt": "2026-09-22T06:59:02.125Z",
+      "estimatedDelivery": "Sep 25, 2026"
+    },
+    {
+      "id": "ord-1001",
+      "orderNumber": "ORD-98421",
+      "userId": "user-demo-1",
+      "customerName": "Alex Morgan",
+      "customerEmail": "alex@example.com",
+      "shippingAddress": {
+        "fullName": "Alex Morgan",
+        "email": "alex@example.com",
+        "phone": "+1 (555) 234-5678",
+        "street": "742 Evergreen Terrace",
+        "city": "Springfield",
+        "state": "OR",
+        "zipCode": "97477",
+        "country": "United States"
+      },
+      "items": [
+        {
+          "productId": "prod-1",
+          "title": "Aura Sound Pro Wireless Noise-Cancelling Headphones",
+          "price": 249.99,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80"
+        },
+        {
+          "productId": "prod-4",
+          "title": "Handcrafted Ceramic Dripper & Mug Set",
+          "price": 46,
+          "quantity": 1,
+          "image": "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+        }
+      ],
+      "subtotal": 295.99,
+      "shippingFee": 0,
+      "tax": 23.68,
+      "discount": 0,
+      "total": 319.67,
+      "paymentMethod": "Credit Card (ending in 4242)",
+      "status": "Shipped",
+      "createdAt": "2026-09-19T06:56:55.995Z",
+      "estimatedDelivery": "Sep 24, 2026"
+    }
+  ],
+  "sessions": {
+    "token-7c661d6c-d157-4ee5-ba01-03b13e214200": "user-0aef264e-4f0e-4ff7-8a13-e39ef028f6dd"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Simple E-commerce Store",
+  "description": "A full-stack e-commerce store with product listings, product details, shopping cart, user registration/login, and order processing backed by Express.js.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
