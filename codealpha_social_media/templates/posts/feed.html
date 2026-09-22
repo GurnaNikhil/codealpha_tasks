@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block title %}Feed - MiniSocial{% endblock %}
+{% block content %}
+<div class="feed-container">
+    <div class="feed-header">
+        <h2>Home Feed</h2>
+        <a href="{% url 'create_post' %}" class="btn btn-primary btn-sm">Create Post</a>
+    </div>
+
+    {% if posts %}
+        <div class="posts-list">
+            {% for post in posts %}
+                <article class="post-card" data-post-id="{{ post.id }}">
+                    <div class="post-card-header">
+                        <a href="{% url 'profile' username=post.author.username %}">
+                            <img src="{{ post.author.profile.profile_picture.url }}" alt="{{ post.author.username }}" class="post-avatar">
+                        </a>
+                        <a href="{% url 'profile' username=post.author.username %}" class="post-author-name">{{ post.author.username }}</a>
+                        <span class="post-date">{{ post.created_at|date:"M d, Y H:i" }}</span>
+                    </div>
+
+                    {% if post.image %}
+                        <div class="post-image-wrapper">
+                            <img src="{{ post.image.url }}" alt="Post image" class="post-image">
+                        </div>
+                    {% endif %}
+
+                    <div class="post-content">
+                        <p class="post-caption">{{ post.content|linebreaksbr }}</p>
+                    </div>
+
+                    <div class="post-actions">
+                        <button class="like-btn {% if post.id in liked_post_ids %}liked{% endif %}"
+                                data-post-id="{{ post.id }}">
+                            <span class="like-icon">&#10084;</span>
+                            <span class="like-text">{% if post.id in liked_post_ids %}Unlike{% else %}Like{% endif %}</span>
+                            <span class="like-count">{{ post.like_count }}</span>
+                        </button>
+                        <a href="{% url 'post_detail' post_id=post.id %}" class="comment-link">
+                            <span>&#128172;</span>
+                            <span>{{ post.comment_count }} Comments</span>
+                        </a>
+                    </div>
+
+                    <div class="post-comment-section">
+                        <form class="comment-form" data-post-id="{{ post.id }}">
+                            {% csrf_token %}
+                            <input type="text" name="text" class="form-input comment-input" placeholder="Write a comment..." maxlength="500">
+                            <button type="submit" class="btn btn-primary btn-sm">Post</button>
+                        </form>
+                        <div class="comments-display" data-post-id="{{ post.id }}">
+                            {% for comment in post.comments.all|slice:":2" %}
+                                <div class="comment-item">
+                                    <img src="{{ comment.user.profile.profile_picture.url }}" alt="avatar" class="comment-avatar">
+                                    <div class="comment-body">
+                                        <strong>{{ comment.user.username }}</strong>
+                                        <span class="comment-text">{{ comment.text }}</span>
+                                        <span class="comment-date">{{ comment.created_at|date:"M d, H:i" }}</span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {% if post.comment_count > 2 %}
+                                <a href="{% url 'post_detail' post_id=post.id %}" class="view-all-comments">View all {{ post.comment_count }} comments</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <h3>No posts in your feed yet</h3>
+            <p>Follow other users or create your first post to see content here.</p>
+            <a href="{% url 'create_post' %}" class="btn btn-primary">Create Post</a>
+            <a href="{% url 'search' %}" class="btn btn-secondary">Find Users to Follow</a>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

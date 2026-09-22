@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}{{ mode|capfirst }} - MiniSocial{% endblock %}
+{% block content %}
+<div class="follow-list-container">
+    <div class="follow-list-card">
+        <h1 class="form-card-title">
+            {% if mode == "followers" %}
+                {{ profile_user.username }}'s Followers
+            {% else %}
+                {{ profile_user.username }} is Following
+            {% endif %}
+        </h1>
+        <a href="{% url 'profile' username=profile_user.username %}" class="btn btn-text btn-sm">Back to profile</a>
+
+        {% if follows %}
+            <div class="follow-list">
+                {% for follow in follows %}
+                    <div class="follow-list-item">
+                        <img src="{% if mode == 'followers' %}{{ follow.follower.profile.profile_picture.url }}{% else %}{{ follow.following.profile.profile_picture.url }}{% endif %}" alt="avatar" class="follow-avatar">
+                        <div class="follow-info">
+                            {% if mode == "followers" %}
+                                <a href="{% url 'profile' username=follow.follower.username %}" class="follow-username">{{ follow.follower.username }}</a>
+                                {% if follow.follower.profile.full_name %}<span class="follow-fullname">{{ follow.follower.profile.full_name }}</span>{% endif %}
+                            {% else %}
+                                <a href="{% url 'profile' username=follow.following.username %}" class="follow-username">{{ follow.following.username }}</a>
+                                {% if follow.following.profile.full_name %}<span class="follow-fullname">{{ follow.following.profile.full_name }}</span>{% endif %}
+                            {% endif %}
+                        </div>
+                        <a href="{% if mode == 'followers' %}{% url 'profile' username=follow.follower.username %}{% else %}{% url 'profile' username=follow.following.username %}{% endif %}" class="btn btn-secondary btn-sm">View Profile</a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="empty-state">
+                <p>
+                    {% if mode == "followers" %}No followers yet.{% else %}Not following anyone yet.{% endif %}
+                </p>
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Search - MiniSocial{% endblock %}
+{% block content %}
+<div class="search-container">
+    <div class="search-card">
+        <h1 class="form-card-title">Search Users</h1>
+        <div class="search-bar-wrapper">
+            <input type="text" id="search-input" placeholder="Search by username or full name..." autocomplete="off">
+        </div>
+        <div id="search-results" class="search-results-list"></div>
+        <div id="search-empty" class="empty-state">
+            <p>Start typing to search for users.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

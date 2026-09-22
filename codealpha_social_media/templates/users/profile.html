@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% block title %}{{ profile_user.username }} - MiniSocial{% endblock %}
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header-card">
+        <div class="profile-header-top">
+            <img src="{{ profile_user.profile.profile_picture.url }}" alt="{{ profile_user.username }}" class="profile-avatar-large">
+            <div class="profile-info">
+                <div class="profile-username-row">
+                    <h2 class="profile-username">{{ profile_user.username }}</h2>
+                    {% if user.is_authenticated and user != profile_user %}
+                        <button class="btn {% if is_following %}btn-secondary{% else %}btn-primary{% endif %} btn-sm follow-btn"
+                                data-username="{{ profile_user.username }}"
+                                data-following="{{ is_following|yesno:'true,false' }}">
+                            {% if is_following %}Following{% else %}Follow{% endif %}
+                        </button>
+                    {% endif %}
+                    {% if user.is_authenticated and user == profile_user %}
+                        <a href="{% url 'edit_profile' %}" class="btn btn-secondary btn-sm">Edit Profile</a>
+                    {% endif %}
+                </div>
+                {% if profile_user.profile.full_name %}
+                    <p class="profile-full-name">{{ profile_user.profile.full_name }}</p>
+                {% endif %}
+                <div class="profile-stats">
+                    <span class="stat-item"><strong>{{ post_count }}</strong> posts</span>
+                    <a href="{% url 'followers' username=profile_user.username %}" class="stat-item"><strong>{{ followers_count }}</strong> followers</a>
+                    <a href="{% url 'following' username=profile_user.username %}" class="stat-item"><strong>{{ following_count }}</strong> following</a>
+                </div>
+                {% if profile_user.profile.bio %}
+                    <p class="profile-bio">{{ profile_user.profile.bio }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <h3 class="section-heading">{{ profile_user.username }}'s Posts</h3>
+    {% if posts %}
+        <div class="posts-grid">
+            {% for post in posts %}
+                <a href="{% url 'post_detail' post_id=post.id %}" class="post-grid-item">
+                    {% if post.image %}
+                        <img src="{{ post.image.url }}" alt="Post image" class="post-grid-image">
+                    {% else %}
+                        <div class="post-grid-text-preview">{{ post.content|truncatewords:15 }}</div>
+                    {% endif %}
+                    <div class="post-grid-overlay">
+                        <span>&#10084; {{ post.like_count }}</span>
+                        <span>&#128172; {{ post.comment_count }}</span>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <p>No posts yet.</p>
+            {% if user.is_authenticated and user == profile_user %}
+                <a href="{% url 'create_post' %}" class="btn btn-primary btn-sm">Create your first post</a>
+            {% endif %}
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

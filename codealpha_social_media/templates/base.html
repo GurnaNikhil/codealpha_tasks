@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}MiniSocial{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'feed' %}" class="navbar-logo">MiniSocial</a>
+            <div class="navbar-search-box">
+                <input type="text" id="nav-search-input" placeholder="Search users..." autocomplete="off">
+                <div id="nav-search-results" class="search-results-dropdown"></div>
+            </div>
+            <div class="navbar-links">
+                <a href="{% url 'feed' %}" class="nav-link">Home</a>
+                <a href="{% url 'search' %}" class="nav-link">Search</a>
+                <a href="{% url 'create_post' %}" class="nav-link">Create Post</a>
+                <a href="{% url 'profile' username=user.username %}" class="nav-link">
+                    <img src="{{ user.profile.profile_picture.url }}" alt="{{ user.username }}" class="nav-avatar">
+                    <span>{{ user.username }}</span>
+                </a>
+                <a href="{% url 'logout' %}" class="nav-link nav-logout">Logout</a>
+            </div>
+        </div>
+    </nav>
+    {% else %}
+    <nav class="navbar navbar-guest">
+        <div class="navbar-container">
+            <a href="{% url 'login' %}" class="navbar-logo">MiniSocial</a>
+            <div class="navbar-links">
+                <a href="{% url 'login' %}" class="nav-link">Login</a>
+                <a href="{% url 'register' %}" class="nav-link nav-register-btn">Register</a>
+            </div>
+        </div>
+    </nav>
+    {% endif %}
+
+    <div class="flash-messages">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="flash-message flash-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <main class="main-content">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{% static 'js/main.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

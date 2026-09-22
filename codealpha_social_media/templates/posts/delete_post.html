@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Delete Post - MiniSocial{% endblock %}
+{% block content %}
+<div class="form-container">
+    <div class="form-card">
+        <h1 class="form-card-title">Delete Post</h1>
+        <p class="delete-confirm-text">Are you sure you want to delete this post? This action cannot be undone.</p>
+        <div class="delete-post-preview">
+            <p>{{ post.content|truncatewords:30 }}</p>
+            {% if post.image %}
+                <img src="{{ post.image.url }}" alt="Post image" class="current-image-preview">
+            {% endif %}
+        </div>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger btn-full">Yes, Delete Post</button>
+        </form>
+        <a href="{% url 'post_detail' post_id=post.id %}" class="btn btn-text btn-full">Cancel</a>
+    </div>
+</div>
+{% endblock %}
